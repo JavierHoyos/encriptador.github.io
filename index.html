@@ -1,0 +1,51 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío - 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<main>
+    <section id="page">
+        <div class="wrapper">
+            <div class="one-container one-container-flex">
+                <header class="logo">
+                    <img src="/images/Vector.png" alt="Logo de alura con la inicial de la letra a">
+                </header>
+
+
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+                <div class="ingresar-texto ingresar-texto-style"></div>
+                    <textarea class="input-texto" name="" id="" cols="30" rows="10" placeholder="Ingrese texto aquí..."></textarea>
+                    <!--<input type="text" placeholder="Ingrese el texto aqui">-->
+                </div>
+                
+
+                <div class="warning">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
+
+                <div class="botons">
+                    <button class="boton-1 boton-style" onclick="btnEncriptar()">Encriptar</button>
+                    
+                    <button class="boton-2 boton-style-2" onclick="btnDesencriptar()">Desencriptar</button>
+                </div>
+            </div>
+
+            <div class="two-container two-container-flex">
+                <br><br><br>
+                <textarea class="mensaje" cols="18" rows="8"></textarea>
+                <button class="copiar" onclick="copiar()">Copiar</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{ 
+    width: 100vw;
+    height: 100vh;
+
+}
+
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 60% 40%);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    height: 100%;
+    width: 100%;
+    background:  #E5E5E5;
+  }
+
+  .one-container {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    background:  #E5E5E5;
+  }
+
+.two-container{
+    grid-column: 2 / 3;
+    grid-row: 1;
+    background: violet;
+    border-radius: 32px;
+    margin: 40px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    margin-right: 140px;
+}
+
+.one-container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.two-container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+    text-align: center;
+}
+
+.two-container img{
+    z-index: 1;
+    transform: transparent;
+}
+
+
+.copiar{
+    position: relative;
+    top: -240px;
+    width: 100px;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+}
+
+.mensaje{
+    width: 320px;
+    height: 323px;
+    position: relative;
+    top: -150px;
+    resize: none;
+    background-image: url("images/Muñeco.png");
+    background-repeat: no-repeat;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 88%;
+    color: #0A3871;
+    border: none;
+}
+
+
+.warning p{
+    position: relative;
+    top: 100px;
+    left: 155px;
+}
+
+
+.logo{
+    position: relative;
+    top: 30px;
+    left: -504px;
+}
+
+
+
+
+.input-texto{
+    border: none;
+}
+
+
+.ingresar-texto{
+    position: relative;
+    width: 277px;
+    height: 48px;
+    left: -30px;
+    top: -285px;
+}
+
+textarea{
+    resize: none;
+}
+
+
+.ingresar-texto-style textarea{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48%;
+    background:  #E5E5E5;
+    color: #0A3871;
+    border: none;
+    padding-top: 20px;
+    resize: none;
+}
+
+
+
+
+.botons{
+    display: flex;
+    padding: 40px;
+    margin-bottom: 150px;
+    margin-left: 600px;
+    width: 600px;
+}
+
+
+
+.boton-1{
+    border-radius: 24px;
+    padding: 10px;
+    /*width: 140px;*/
+    width: 328px;
+}
+
+.boton-style{
+    background: #0A3871;
+    border: transparent;
+    color: #FFFFFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+}
+
+.boton-2{
+    border-radius: 24px;
+    padding: 10px;
+   /* width: 140px;*/
+   width: 328px;
+    background: #D8DFE8;
+    border: transparent;
+    margin-right: 50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+
+.boton-style-2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #0A3871;
+}
+
