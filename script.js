@@ -1,53 +1,57 @@
-const inputTexto = document.querySelector(".input-texto");
-const mensaje = document.querySelector(".mensaje");
+const textoEntrada = document.querySelector(".texto-entrada");
+const textoSalida = document.querySelector(".texto-salida");
+const image = document.querySelector(".imagen-salida");
+const infoSalida = document.querySelector(".ingresar-texto");
 
-
-function btnEncriptar(){
-    const textoEncriptado = encriptar(inputTexto.value);
-    mensaje.value = textoEncriptado;
-    mensaje.style.backgroundImage = "none";
-    inputTexto.value = ""
+function botonEncriptar(){
+    const textoEncriptado = encriptar(textoEntrada.value);
+    textoSalida.value = textoEncriptado.replace(/[^a-zA-Z ]/g, '');
+    image.style.display = "none";
+    infoSalida.style.display = "none";
+    textoEntrada.value = "";
 }
 
-function encriptar(stringEncriptado) {
+
+function encriptar(stringEncriptada){
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringEncriptado = stringEncriptado.toLowerCase();
-    
-    for(let i = 0; i < matrizCodigo.length; i++) {
-        if(stringEncriptado.includes(matrizCodigo[i][0])){
-            stringEncriptado = stringEncriptado.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+    stringEncriptada = stringEncriptada.toLowerCase();
+
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1]);
         }
     }
-
-    return stringEncriptado;
+    return stringEncriptada;
 }
 
-
-
-
-function btnDesencriptar(){
-    const textoDesencriptado = desencriptar(inputTexto.value);
-    mensaje.value = textoDesencriptado;
-    inputTexto.value = ""
+function botonDesencriptar(){
+    const textoEncriptado = desencriptar(textoEntrada.value);
+    textoSalida.value = textoEncriptado.replace(/[^a-zA-Z ]/g, '');
+    image.style.display = "none";
+    infoSalida.style.display = "none";
+    textoEntrada.value = "";
 }
 
-function desencriptar(stringDesencriptado) {
+function desencriptar(stringDesencriptada){
     let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-    stringDesencriptado = stringDesencriptado.toLowerCase();
-    
-    for(let i = 0; i < matrizCodigo.length; i++) {
-        if(stringDesencriptado.includes(matrizCodigo[i][1])){
-            stringDesencriptado = stringDesencriptado.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0])
+    stringDesencriptada = stringDesencriptada.toLowerCase();
+
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringDesencriptada.includes(matrizCodigo[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1], matrizCodigo[i][0]);
         }
     }
-
-    return stringDesencriptado;
+    return stringDesencriptada;
 }
 
 
 function copiar(){
-    mensaje.select()
-    navigator.clipboard.writeText(mensaje.value)
-    mensaje.value = ""
-    alert("Texto copiado")
+    textoSalida.select();
+    document.execCommand('copy');
 }
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Securit
