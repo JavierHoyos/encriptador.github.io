@@ -44,8 +44,9 @@ body{
 /** Main **/
 main{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    justify-content: center;
 }
 
 /* Sección 1 */
@@ -102,7 +103,7 @@ main{
     margin-right: 30px;
     background: lightblue;
     background-color: #e0ffcd;
-    padding: 25px 60px;
+    padding: 25px 20px;
     text-align: center;
     border: 1px solid darkslategrey;
     border-radius: 20px;
@@ -168,9 +169,36 @@ footer a{
 
 /** Responsive Design **/
 
+@media screen and (max-width: 1440px){
+    .texto-entrada{
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .encabezado{
+        width: 100%;
+    }
+    .texto-salida{
+        width: 300px;
+    }
+    .texto-entrada{
+        margin-top: 40px;
+    }
+}
+
 @media screen and (max-width: 1024px){
     main{
         display: inline-block;
+    }
+    .encabezado{
+        width: 100%;
+    }
+    .titulo{
+        /*padding: absolute;
+        right: 300px;
+        margin-bottom: 20px;*/
+        text-align: center;
     }
     .mensaje-entrada, .mensaje-salida{
         width: 80%;
@@ -178,12 +206,31 @@ footer a{
     }
     .mensaje-salida{
         margin-top: 30px;
+        margin-bottom: 30px;
     }
     .mensaje-entrada{
-        margin: 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .mensaje-entrada p{
+        text-align: center;
+    }
+    .bf{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .texto-entrada, .texto-salida{
         width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: none;
+    }
+    .texto-entrada{
+        margin-top: 40px;
     }
 }
 
@@ -191,14 +238,29 @@ footer a{
     main{
         display: block;
     }
+    .encabezado{
+        width: 100%;
+    }
+    .titulo{
+       /* padding: absolute;
+        right: 200px;
+        margin-bottom: 20px;*/
+        text-align: center;
+    }
+    .texto-entrada{
+        margin-top: 40px;
+    }
 }
 
 @media screen and (max-width: 600px){
     main{
-        width: 90%;
+        width: 100%;
         display: block;
     }
     .encabezado{
+        text-align: center;
+    }
+    .titulo{
         text-align: center;
     }
     .titulo, .imagen-secreto{
@@ -211,7 +273,7 @@ footer a{
         margin: 0 30px;
     }
     .mensaje-salida{
-        width: 70%;
+        width: 80%;
         margin: 20px 30px;
     }
 }
@@ -225,14 +287,19 @@ footer a{
         display: none;
     }
     .mensaje-entrada{
-        width: 90%;
+        min-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
     }
+
+
     .texto-entrada{
         font-size: 15px;
+        margin: 20px;
     }
     .mensaje-salida{
-        width: 70%;
-        margin: 20px;
+        width: 90vw;
+        margin: 0 auto;
     }
     .texto-salida{
         font-size: 15px;
@@ -253,15 +320,33 @@ footer a{
         font-size: 18px;
     }
     .texto-entrada{
-        width: 70%;
+        width: 90%;
+    }
+    .botones{
+        display: flex;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    .encriptar{
+        height: 61px;
+        margin: 15px;
+    }
+    .desencriptar{
+        margin-right: 35px;
     }
     .texto-salida{
-        width: 70%;
-        height: 100px;
+        width: 90%;
+        /*height: 100px;*/
     }
-    .mensaje-salida{
-        width: 200px;
+    .mensaje-entrada, .mensaje-salida{
+        width: 100%;
+        margin: 0 auto;
     }
+    /*.mensaje-salida{
+        width: 280px;
+        display: flex;
+        justify-content: center;
+    }*/
     footer a{
         text-align: center;
     }
