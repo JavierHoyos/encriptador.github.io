@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 <body>
-    <header>
+    <header class="container-fluid">
         <div class="encabezado">
             <a href="https://www.aluracursos.com/">
                 <img src="images/Vector.png" alt="alura-logo" class="alura-logo">
@@ -19,7 +22,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="container-fluid">
         <section class="mensaje-entrada">
             <textarea name="input" cols="40" rows="6" class="texto-entrada" placeholder="Ingrese el texto aquí"></textarea>
             <p>Solo letras minúsculas y sin acentos</p>
@@ -34,19 +37,23 @@
                 <img src="images/Muñeco.png" alt="Background" class="imagen-salida">
                 <h3 class="ingresar-texto">Ingrese el texto que quieres encriptar o desencriptar</h3>
             </div>
-            <textarea name="output" cols="32" rows="8" placeholder="Ningún mensaje fue encontrado" class="texto-salida"></textarea>
-            <button class="copiar" onclick="copiar()">Copiar</button>
+            <div class="bf">
+                <textarea name="output" cols="32" rows="8" placeholder="Ningún mensaje fue encontrado" class="texto-salida"></textarea>
+                <button class="copiar" onclick="copiar()">Copiar</button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <a href="https://www.linkedin.com/in/rocio-gonzalez-116a54249/"><img src="/images/logotipo-de-linkedin.png" alt="linkedin-ícono" class="link"></a>
-        <a href="https://github.com/WebRocio"><img src="/images/signo-de-github.png" alt="github-ícono" class="git"></a>
+    <footer class="container-fluid">
+        <a href="https://www.linkedin.com/in/hoyosjavier56/"><img src="/images/logotipo-de-linkedin.png" alt="linkedin-ícono" class="link"></a>
+        <a href="https://github.com/JavierHoyos"><img src="/images/signo-de-github.png" alt="github-ícono" class="git"></a>
     </footer>
    
     <script src="script.js"></script>
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>-->
      
 </body>
 </html>
-
-
