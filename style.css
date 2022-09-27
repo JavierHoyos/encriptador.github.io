@@ -3,7 +3,9 @@ body{
     width: 100%;
    /* background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(184,182,220,1) 60%, rgba(176,183,223,1) 69%, rgba(148,187,233,1) 100%);
    */
-   background-color:  #9fd3c7;
+   background-color:  #9fd3c7 !important;
+
+   background-image: linear-gradient(to left bottom, #19badc, #69c9e0, #98d8e6, #c0e6ed, #e6f4f6);
 }
  
 /** Header **/
@@ -27,7 +29,7 @@ body{
 .titulo{
     font-size: 40px;
     font-weight: bold;
-    color: #400340;
+    color: #226a7a;
     text-shadow: 20px 10px 20px  #385170;
     position: absolute;
     top: 30px;
@@ -64,7 +66,14 @@ main{
     font-size: 30px;
     border-radius: 20px;
     padding: 20px;
+    background-image: url(images/Lionel_Messi_20180626.jpg);
+    background-size: 100% 100%;
+    height: 600px;
+    color: white;
+    z-index: -1;
 }
+
+.texto-entrada::placeholder { color: white; }
 
 .mensaje-entrada p:before{
     content: '\26A0';
@@ -83,17 +92,22 @@ main{
 }
 
 .encriptar{
-    background-color:   #5c5470;
+    background-color:   #98d8e6;
     margin: 0 30px 0 10px;
 }
 
 .desencriptar{
-    background-color: #dbd8e3;
+    background-color: white;
 }
 
-.encriptar:hover, .desencriptar:hover{
-    background-color: #773977;
-    color: white;
+.encriptar:hover{
+    background-color: white;
+    transition: 0.5s; 
+}
+
+
+.desencriptar:hover{
+    background-color: #98d8e6;
     transition: 0.5s; 
 }
 
@@ -125,12 +139,16 @@ main{
     margin: 0 0 10px 0;
     padding: 10px;
     font-size: 22px;
+    color: white;
+    background-image: url(images/descarga.jfif);
+    background-size: 100% 100%;
 }
+
+.texto-salida::placeholder { color: white; }
 
 .copiar{
     display: block;
-    background: #773977;
-    color: white;
+    background: #98d8e6;
     padding: 20px;
     font-size: 18px;
     border-radius: 20px;
@@ -139,8 +157,7 @@ main{
 }
 
 .copiar:hover{
-    background: #f0bff0;
-    color: #400340;
+    background: white;
     padding: 22px;
     transition: 0.5s;
 }
@@ -171,19 +188,20 @@ footer a{
 
 @media screen and (max-width: 1440px){
     .texto-entrada{
-        margin-top: 40px;
+        margin-top: 80px;
     }
 }
 
 @media screen and (max-width: 1280px){
     .encabezado{
         width: 100%;
+        border: 3px solid black;
     }
     .texto-salida{
         width: 300px;
     }
     .texto-entrada{
-        margin-top: 40px;
+        margin-top: 80px;
     }
 }
 
