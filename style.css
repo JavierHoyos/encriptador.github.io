@@ -195,7 +195,6 @@ footer a{
 @media screen and (max-width: 1280px){
     .encabezado{
         width: 100%;
-        border: 3px solid black;
     }
     .texto-salida{
         width: 300px;
